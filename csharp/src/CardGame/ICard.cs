@@ -8,4 +8,20 @@ namespace CodingChallenge.CardGame
 
         Value Value { get; }
     }
+
+    public class Card : ICard
+    {
+        public Suit Suit { get; set; }
+        public Value Value { get; set; }
+
+        public Card()
+        {
+
+        }
+
+        public bool Equals(ICard other)
+        {
+            return (this.Suit == other.Suit && this.Value == other.Value);
+        }
+    }
 }
